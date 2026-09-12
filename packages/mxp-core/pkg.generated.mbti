@@ -1,12 +1,50 @@
 // Generated using `moon info`, DON'T EDIT IT
 package "obitare/mxp-core"
 
+import {
+  "moonbitlang/core/debug",
+}
+
 // Values
-pub fn version() -> String
+pub fn is_chrome_version(String) -> Bool
+
+pub fn is_semver(String) -> Bool
+
+pub fn is_vscode_engine_range(String) -> Bool
+
+pub fn is_vscode_id(String) -> Bool
 
 // Errors
+pub(all) suberror ManifestError {
+  InvalidJson(String)
+  MissingField(field~ : String)
+  InvalidField(field~ : String, reason~ : String)
+} derive(Eq, @debug.Debug)
+pub impl Show for ManifestError
 
 // Types and methods
+pub struct ChromeManifest {
+  manifest_version : Int
+  name : String
+  version : String
+} derive(Eq, @debug.Debug)
+pub fn ChromeManifest::parse(String) -> Self raise ManifestError
+pub fn ChromeManifest::validate(Self) -> Array[Issue]
+
+pub(all) struct Issue {
+  field : String
+  message : String
+} derive(Eq, @debug.Debug)
+
+pub struct VsCodeManifest {
+  name : String
+  display_name : String
+  version : String
+  publisher : String
+  engines_vscode : String
+} derive(Eq, @debug.Debug)
+pub fn VsCodeManifest::parse(String) -> Self raise ManifestError
+pub fn VsCodeManifest::validate(Self) -> Array[Issue]
 
 // Type aliases
 

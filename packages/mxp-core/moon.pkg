@@ -1,3 +1,7 @@
 import {
+  "moonbitlang/core/json",
+}
+
+import {
   "obitare/mxp-core" @mxp_core,
 } for "test"
