@@ -11,3 +11,8 @@ license = "Apache-2.0"
 keywords = [ "moonbit", "cli", "scaffold", "extension" ]
 
 description = "CLI entry for the mxp extension toolkit: scaffold VSCode/Chrome extension projects"
+
+import {
+  "moonbitlang/async@0.21.3",
+  "obitare/mxp-core@0.1.0",
+}

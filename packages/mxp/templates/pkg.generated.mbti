@@ -1,0 +1,29 @@
+// Generated using `moon info`, DON'T EDIT IT
+package "obitare/mxp/templates"
+
+import {
+  "moonbitlang/core/debug",
+}
+
+// Values
+
+// Errors
+
+// Types and methods
+pub(all) struct TemplateFile {
+  path : String
+  content : String
+} derive(Eq, @debug.Debug)
+
+pub enum TemplateId {
+  VsCodeBasic
+  ChromeBasic
+} derive(Eq, @debug.Debug)
+pub fn TemplateId::all() -> Array[Self]
+pub fn TemplateId::from_name(String) -> Self?
+pub fn TemplateId::name(Self) -> String
+pub fn TemplateId::render(Self, String) -> Array[TemplateFile]
+
+// Type aliases
+
+// Traits

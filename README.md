@@ -27,6 +27,27 @@ moon check --target all
 moon test
 ```
 
+### 用 mxp 脚手架生成扩展项目
+
+```bash
+# 生成一个 MoonBit 驱动的 VSCode 扩展
+moon run --target wasm packages/mxp/cmd/main -- new vscode-basic my-extension
+
+# 生成一个 MoonBit 驱动的 Chrome MV3 扩展
+moon run --target wasm packages/mxp/cmd/main -- new chrome-basic my-extension
+
+# 查看可用模板
+moon run --target wasm packages/mxp/cmd/main -- list
+```
+
+生成的项目含 MoonBit 源码（`src/`）与宿主工程文件（`package.json` /
+`manifest.json`），构建产物路径已在模板中配好：
+
+```bash
+cd my-extension
+moon build --target js --release
+```
+
 ## 状态
 
 项目处于早期开发阶段（9 月黑客松周期）。路线图见仓库 Issues。

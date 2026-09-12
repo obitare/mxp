@@ -2,6 +2,7 @@
 target/
 _build/
 .repos/
+.mooncakes/
 *.core
 moon_workspace_lock*
 

@@ -1,0 +1,31 @@
+// Generated using `moon info`, DON'T EDIT IT
+package "obitare/mxp/cli"
+
+import {
+  "moonbitlang/core/debug",
+  "obitare/mxp/templates",
+}
+
+// Values
+pub fn parse_command(Array[String]) -> Command raise CliError
+
+pub fn validate_project_name(@templates.TemplateId, String) -> Unit raise CliError
+
+// Errors
+pub(all) suberror CliError {
+  UnknownTemplate(name~ : String)
+  InvalidProjectName(name~ : String)
+  MissingArguments(hint~ : String)
+} derive(Eq, @debug.Debug)
+pub impl Show for CliError
+
+// Types and methods
+pub(all) enum Command {
+  New(template~ : @templates.TemplateId, name~ : String)
+  List
+  Help
+} derive(Eq, @debug.Debug)
+
+// Type aliases
+
+// Traits

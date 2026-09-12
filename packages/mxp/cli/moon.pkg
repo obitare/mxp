@@ -1,0 +1,8 @@
+import {
+  "obitare/mxp/templates",
+  "obitare/mxp-core" @mxp_core,
+}
+
+import {
+  "obitare/mxp/cli",
+} for "test"
