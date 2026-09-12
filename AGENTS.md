@@ -38,11 +38,18 @@
   - 破坏性命令（rm/mv/dd/重定向等）目标路径必须在上述可写范围内
 - 硬拦截覆盖结构化路径（Write/Edit/Read 等）与 Bash 命令字符串分析；后者是启发式，不构成 OS 级沙箱，不得主动尝试绕过
 
+## 分支与提交规则
+
+- **`main` 只通过 PR 合并，不要默认直推 main**（本地 `.git/hooks/pre-push` 会拦截；确需直推时显式 `MXP_ALLOW_MAIN_PUSH=1` 覆盖）
+- 日常开发、提交与推送默认走 `develop` 分支
+- PR 合并同时满足比赛「保留 commits/Issues/PR 记录」的验收要求
+
 ## 工具链
 
 - moon 0.1.20260904，安装于 `~/.moon/bin`（`~/.bashrc` 已加 PATH）
 - 工具链缺失时安装：`curl -fsSL https://cli.moonbitlang.cn/install/unix.sh | bash`
 - 使用新版 `moon.mod` / `moon.pkg` 格式；不要创建旧版 `moon.mod.json`
+- MoonBit 语言/工具链版本变更摘录（2025-11 基线 → 0.10.9，含废弃迁移清单）见根目录 `CONTEXTS.md`；写代码遇到废弃警告或设计公共 API 时先查那里
 
 ## 常用命令
 
