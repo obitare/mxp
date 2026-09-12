@@ -18,5 +18,7 @@ jobs:
 
       - name: Check and test
         run: |
+          moon update
+          moon install
           moon check --target all
           moon test
