@@ -12,3 +12,6 @@ moon_workspace_lock*
 
 # Local agent/client config (contains secrets, never publish)
 .zcode/
+
+# Session-orchestration files live outside the repo (see ../AGENTS.md)
+AGENTS.md
