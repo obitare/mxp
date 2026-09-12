@@ -49,7 +49,7 @@
 - moon 0.1.20260904，安装于 `~/.moon/bin`（`~/.bashrc` 已加 PATH）
 - 工具链缺失时安装：`curl -fsSL https://cli.moonbitlang.cn/install/unix.sh | bash`
 - 使用新版 `moon.mod` / `moon.pkg` 格式；不要创建旧版 `moon.mod.json`
-- MoonBit 语言/工具链版本变更摘录（2025-11 基线 → 0.10.9，含废弃迁移清单）见根目录 `CONTEXTS.md`；写代码遇到废弃警告或设计公共 API 时先查那里
+- MoonBit 语言/工具链版本状态与项目上下文集见根目录 `CONTEXT.md`（逐版本变更摘录在其指向的 `docs/moonbit-updates-digest.md`）；写代码遇到废弃警告或设计公共 API 时先查那里
 
 ## 常用命令
 
