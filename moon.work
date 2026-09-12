@@ -1,0 +1,6 @@
+members = [
+  "./packages/mxp-core",
+  "./packages/mxp-vsc",
+  "./packages/mxp-crx",
+  "./packages/mxp",
+]

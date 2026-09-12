@@ -1,0 +1,3 @@
+import {
+  "obitare/mxp-vsc" @mxp_vsc,
+} for "test"
