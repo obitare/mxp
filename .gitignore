@@ -1,0 +1,13 @@
+# MoonBit build artifacts
+target/
+_build/
+.repos/
+*.core
+moon_workspace_lock*
+
+# OS / editor
+.DS_Store
+*.swp
+
+# Local agent/client config (contains secrets, never publish)
+.zcode/
